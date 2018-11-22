@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## Resources
-* Git repository(web client) - 
-* Git repository(backend api) - 
+* Git repository(web client) - https://github.com/juriton/persona-web.git
+* Git repository(backend api) - https://github.com/juriton/persona.git
 
 
 ## Setup development environment
