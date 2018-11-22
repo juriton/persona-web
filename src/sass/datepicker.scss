@@ -1,0 +1,160 @@
+/* default bootstrap dropdown styles */
+@import "../../node_modules/bootstrap/scss/nav";
+//@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/input-group";
+
+.rkas-datepicker {
+  padding-top: 10px;
+
+  input.form-control {
+    margin-top: 0;
+    padding-right: 40px;
+    border-radius: 4px !important;
+  }
+
+  .input & div {
+    margin-top: 0;
+  }
+
+  .input-group-append {
+    margin-top: 0;
+    z-index: 3;
+
+    button {
+      position: absolute;
+      right: 0;
+      background: none;
+      padding: 0 10px;
+      border: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      bottom: 0;
+      top: 0;
+    }
+  }
+
+  select {
+    text-indent: 0;
+    margin-top: 0 !important;
+  }
+
+  > .dropdown-menu {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px $color-grey-3;
+    padding: 20px !important;
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    min-width: unset;
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  .ngb-dp-header {
+    margin-bottom: 0 !important;
+    height: auto !important;
+
+    &[_ngcontent-c0] {
+      border-bottom: none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      text-align: center;
+      border-radius: 1em;
+      color: $color-base-2;
+
+      .ngb-dp-navigation-chevron:before {
+        border-width: 1px 1px 0 0;
+      }
+
+      &:hover {
+        border: 1px solid $color-base-2;
+      }
+
+    }
+  }
+
+  [_nghost-c1].btn-secondary,
+  [_nghost-c2].btn-secondary {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .ngb-dp-weekday {
+    //width: 30px !important;
+    margin: 0 1px;
+    text-align: center;
+  }
+  .ngb-dp-day {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    border: solid 1px transparent;
+    justify-content: center;
+    margin-left: 1px;
+    margin-right: 1px;
+
+    &[_ngcontent-c3] {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover {
+      border: solid 1px $color-grey-3;
+      border-radius: 20px;
+    }
+
+    .bg-primary {
+      background-color: $color-base-2;
+      border-radius: 20px;
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+      min-width: 30px;
+    }
+  }
+
+  //--bootstrap update
+
+  .ngb-dp-header[_ngcontent-c0] {
+    padding-top: 0;
+  }
+
+  [_nghost-c2] {
+    height: auto;
+    line-height: 1;
+  }
+
+  .ngb-dp-arrow[_ngcontent-c2] {
+    height: auto;
+  }
+
+  .ngb-dp-arrow button {
+    padding-left: 5px;
+  }
+
+  .ngb-dp-arrow.right button {
+    padding-left: 0px;
+    padding-right: 5px;
+  }
+
+  .ngb-dp-weekday[_ngcontent-c3] {
+    color: $color-grey-2;
+  }
+
+  .ngb-dp-weekdays[_ngcontent-c3] {
+    border-bottom: none;
+  }
+}

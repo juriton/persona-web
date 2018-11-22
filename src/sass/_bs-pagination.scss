@@ -1,0 +1,25 @@
+/* default bootstrap dropdown styles */
+@import "../../node_modules/bootstrap/scss/pagination";
+@import 'variables';
+
+/* Local overwrites */
+.page-item.disabled .page-link,
+.page-link {
+  border: none;
+  background-color: $color-grey-4;
+  border-radius: 50% !important;
+  color: $color-base-1;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 0;
+  text-align: center;
+  line-height: 30px;
+
+  //.page-item.disabled:hover &,
+  .page-item.active &,
+  &:hover {
+    color: $white;
+    background-color: $color-base-1;
+  }
+}

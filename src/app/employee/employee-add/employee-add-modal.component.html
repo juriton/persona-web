@@ -1,0 +1,60 @@
+<div>
+  <div class="modal-header modal-block-primary">
+    <h2 class="modal-title">Add employee</h2>
+    <button class="modal__close" (click)="closeModal()">
+      Close
+    </button>
+  </div>
+  <div class="modal-body clearfix">
+    <div class="modal-text text">
+      <div class="grid grid--vertical-gutter-double">
+        <div class="grid__col--xs-12">
+          <label class="input">
+           new employee
+            <ng-select
+              id="newEmployee"
+              name="newEmployee"
+              [items]="people$ | async"
+              [closeOnSelect]="true"
+              [hideSelected]="true"
+              bindLabel="fullName"
+              [(ngModel)]="newEmployee"></ng-select>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body clearfix">
+    <div class="modal-text text">
+      <div class="grid grid--vertical-gutter-double">
+        <div class="grid__col--xs-12">
+          <label class="input">
+            existsted employee
+            <ng-select
+              id="existsEmployee"
+              name="existsEmployee"
+              [items]="employees$ | async"
+              [closeOnSelect]="true"
+              [hideSelected]="true"
+              bindLabel="fullName"
+              [(ngModel)]="existsEmployee"></ng-select>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="grid grid--no-vertical-gutter grid--end-xs">
+      <div class="grid__col--xs">
+        <button class="button button--secondary button--small" type="button" (click)="closeModal()">
+          Cancel
+        </button>
+      </div>
+      <div class="grid__col--xs">
+        <button class="button button--primary button--small" type="button" (click)="addNewEmployee()">
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

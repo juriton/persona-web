@@ -1,0 +1,48 @@
+/* default bootstrap dropdown styles */
+
+@import "../../node_modules/bootstrap/scss/modal";
+$modal-padding: 30px;
+
+.modal {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  max-width: none;
+  background-color: transparent;
+}
+
+.modal-title {
+  font-size: 20px;
+  color: $color-grey-5;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-top: $modal-padding;
+  padding-left: $modal-padding;
+  padding-right: $modal-padding;
+  padding-bottom: 0;
+}
+
+.modal-body {
+  padding-left: $modal-padding;
+  padding-right: $modal-padding;
+}
+
+.modal-footer {
+  border-top: none;
+  padding-bottom: $modal-padding;
+  padding-left: $modal-padding;
+  padding-right: $modal-padding;
+}
+
+.modal-xl > .modal-dialog {
+  max-width: 1490px !important;
+  min-width: 700px !important;
+  width: 80% !important;
+}

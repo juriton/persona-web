@@ -1,0 +1,47 @@
+
+<div class="grid grid__col--xs-12">
+  <div class="h2 grid--center-header">Tallink test task</div>
+  <div class="grid--right-header grid__col--xs-6">
+   <input type="text" [(ngModel)]="searchValue" placeholder="search employee" style="width: 350px"/>
+  </div>
+  <div class="grid__col--xs-4">&nbsp;</div>
+</div>
+<div class="grid" *ngIf="page">
+  <div class="grid__col--xs-12">
+    <div>
+      <ul id="myUL">
+        <div *ngFor="let company of page.content">
+          <li *ngFor="let director of company.directors">
+            <h4>{{director.jobTitle}}</h4>
+            <ul>
+              <li *ngFor="let manager of director.managers">
+                <div  class="grid--no-vertical-gutter">
+                  <div class="h5 grid__col--xs-3">
+                    {{manager.jobTitle}}&nbsp;&nbsp;&nbsp;
+                  </div>
+                  <div class="grid__col--xs-3">
+                    <a class="text-h7 link" (click)="addNewEmployee(director, manager)">+ Add employee</a>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li>
+                        <app-employees-list [director] = "director" [manager] = "manager" [searchValue] = "searchValue" (employeesChanged)="employeesChanged($event)"></app-employees-list>
+                      </li>
+                    </ul>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

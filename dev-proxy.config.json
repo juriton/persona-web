@@ -1,0 +1,13 @@
+{
+  "/api": {
+    "target":  {
+      "host": "localhost",
+      "protocol": "http:",
+      "port": 9003
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "pathRewrite": {"^/api" : ""}
+  }
+}

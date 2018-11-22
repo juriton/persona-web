@@ -1,0 +1,77 @@
+/* default bootstrap dropdown styles */
+
+@import "../../node_modules/bootstrap/scss/tooltip";
+$tooltip-bg:          $color-grey-4;
+$tooltip-arrow-color: $tooltip-bg;
+$tooltip-border-color: $color-grey-3;
+
+.tooltip {
+  .tooltip-inner {
+    color: $color-grey-1;
+    background-color: $tooltip-bg;
+    border: 1px solid $tooltip-border-color;
+  }
+
+  .arrow {
+    &::after {
+      position: absolute;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+  .bs-tooltip-top {
+    .arrow {
+      &::before {
+        border-top-color: $tooltip-border-color;
+      }
+      &::after {
+        border-width: 0.4rem 0.4rem 0;
+        border-top-color: $tooltip-arrow-color;
+        top: -1px;
+      }
+    }
+  }
+
+  .bs-tooltip-right {
+    .arrow {
+      &::before {
+        border-right-color: $tooltip-border-color;
+      }
+      &::after {
+        border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+        border-right-color: $tooltip-arrow-color;;
+        right: -1px;
+      }
+    }
+  }
+
+  .bs-tooltip-bottom {
+    .arrow {
+      &::before {
+        border-bottom-color: $tooltip-border-color;
+      }
+      &::after {
+        border-width: 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+        border-bottom-color: $tooltip-arrow-color;;
+        bottom: -1px;
+      }
+    }
+  }
+
+  .bs-tooltip-left {
+    .arrow {
+      &::before {
+        border-left-color: $tooltip-border-color;
+      }
+      &::after {
+        border-width: ($tooltip-arrow-width / 2) 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+        border-left-color: $tooltip-arrow-color;;
+        left: -1px;
+      }
+    }
+  }
+
+

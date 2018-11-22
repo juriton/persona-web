@@ -1,0 +1,82 @@
+/* default bootstrap accordion styles */
+
+
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/card";
+@import "mixins";
+
+.accordion {
+
+  h5 {
+    font-size: $font-size-base;
+    line-height: 1;
+    color: $color-grey-5;
+  }
+
+  .card {
+    border-style: solid !important;
+    border-color: $color-grey-4 !important;
+    border-width: 0 4px !important;
+    border-top: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  .collapse {
+    border-bottom: 4px solid $color-grey-4;
+  }
+
+  .card + .card {
+    margin-top: 5px;
+  }
+
+  .card-header {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  
+  .card-body {
+    padding: 0 0;
+  }
+  .card-header .collapsed .accordion__icon--down {
+    display: inline-block;
+  }
+  .card-header .collapsed .accordion__icon--up {
+    display: none;
+  }
+
+  .accordion__icon--down,
+  .accordion__icon--up {
+    @at-root .accordion--right#{&} {
+      left: unset;
+      right: 20px;
+    }
+  }
+
+  .card-header {
+    background-color: #eee;
+    padding: 16px 20px 16px 70px;
+
+    @at-root .accordion--right#{&} {
+      padding: 16px 70px 16px 20px;
+    }
+  }
+  .card-header button {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    font-size: $font-size-h7;
+    @include font-regular();
+
+    &[aria-expanded="true"] {
+      font-weight: 600;
+    }
+  }
+
+  .card-header button:focus {
+    outline: 0;
+  }
+}

@@ -1,0 +1,16 @@
+/* default bootstrap dropdown styles */
+@import "../../node_modules/bootstrap/scss/dropdown";
+
+/* Local overwrites */
+.dropdown-menu {
+  min-width: 100%;
+  border-radius: 0;
+  border: none;
+}
+
+.dropdown-toggle {
+
+  &[aria-expanded="true"] .dropdown__icon {
+    transform: rotate(180deg);
+  }
+}

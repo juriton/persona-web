@@ -1,0 +1,100 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.ng-select {
+
+  .input & {
+    margin-top: 10px;
+  }
+
+  //&:focus,
+  //*:focus,
+  &.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+    outline: none;
+    border-color: #c7c7c7;
+    box-shadow: 0 0 2px 2px rgba(199, 199, 199, .5);
+  }
+
+  .ng-select-container {
+    min-height: 40px;
+
+    @at-root {
+      .form-item &,
+      .input--small & {
+        min-height: 29px;
+        font-size: $font-size-xsmall;
+      }
+    }
+
+    input {
+      padding: 0;
+    }
+  }
+
+  &.ng-select-single .ng-select-container {
+    height: 40px;
+
+    @at-root {
+      .form-item &,
+      .input--small & {
+        height: 29px;
+      }
+    }
+  }
+
+  //multi select
+  &.ng-select-multiple .ng-select-container .ng-value-container {
+    .ng-placeholder {
+      top: initial;
+    }
+
+    .ng-value {
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: $color-grey-4;
+      color: #4a4a4a;
+      border: none;
+      border-radius: 10px;
+
+      .ng-value-icon {
+        color: #000000;
+        opacity: .2;
+
+        &:hover {
+          background: none;
+          opacity: .5;
+          border: none;
+        }
+
+        &.left {
+          border: none;
+        }
+      }
+
+    }
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    &:not(:first-child) {
+      border-top: 1px solid $color-grey-4;
+    }
+
+    @at-root {
+      .form-item &,
+      .input--small & {
+        font-size: $font-size-xsmall;
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+    }
+
+    &.ng-option-marked {
+      background-color: #f5f5f5;
+    }
+
+  }
+  &.ng-invalid.ng-dirty .ng-select-container {
+    border-color: $color-error !important;
+  }
+}
+
+

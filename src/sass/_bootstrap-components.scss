@@ -1,0 +1,22 @@
+/* backwards compatibility support for Bootstrap components. */
+.bootstrapWrapper {
+  @import "../../node_modules/bootstrap/dist/css/bootstrap.min";
+}
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+/* bootstrap components */
+@import "../../node_modules/bootstrap/scss/utilities/display";
+@import "bs-dropdown";
+@import "bs-pagination";
+@import "bs-modal";
+@import "bs-popover";
+@import "bs-tooltip";
+@import "../../node_modules/bootstrap/scss/utilities/spacing";
+@import "../../node_modules/bootstrap/scss/utilities/flex";
+@import "bs-accordion";
+
+.card-header  {
+  position: relative;
+}
