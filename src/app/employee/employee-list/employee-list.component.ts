@@ -1,11 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 import {Page} from "../../page";
-import {Employee} from "../employee";
 import {EmployeeFilter} from "../employee-filter";
 import {Manager} from "../../manager/manager";
 import {EmployeeService} from "../employee.service";
 import {Director} from "../../director/director";
-import {RkasToastrService} from "../../util/toastr/toastr.service";
+import {CompanyToastrService} from "../../util/toastr/company-toastr.service";
 import {CompanyService} from "../../company/company.service";
 import {Company} from "../../company/company";
 import {Router} from "@angular/router";
@@ -16,7 +15,8 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-employees-list',
-  templateUrl: 'employee-list.component.html'
+  templateUrl: 'employee-list.component.html',
+  styleUrls: ['employee-list.component.css'],
 })
 export class EmployeeListComponent implements OnInit {
   @Input() manager: Manager;
@@ -28,7 +28,7 @@ export class EmployeeListComponent implements OnInit {
 
 
   constructor(private employeeService: EmployeeService,
-              private toastr: RkasToastrService,
+              private toastr: CompanyToastrService,
               private router: Router,
               private companyService: CompanyService) {
   }

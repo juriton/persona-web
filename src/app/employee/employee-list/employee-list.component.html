@@ -1,18 +1,10 @@
-<div class="grid__col--xs-4">
-  <table class="table table--bordered-horizontal">
-    <thead>
-    <th class="nowrap">employees</th>
-    <th class="nowrap"></th>
-    <th class="nowrap"></th>
-    </thead>
-    <tbody>
-    <tr  *ngFor="let employee of manager.employees | orderBy: {property: 'orderNr', direction: -1}">
-      <td class="nowrap">
-        <div innerHTML="{{employee.user.fullName | highlight : searchValue}}"></div>
-      </td>
-      <td></td>
-      <td><a class="text-h7 link" (click)="removeEmployee(employee)">remove</a></td>
-    </tr>
-    </tbody>
-  </table>
+<div class="clt">
+  <ul>
+    <li *ngFor="let employee of manager.employees | orderBy: {property: 'orderNr', direction: -1}">
+      <span innerHTML="{{employee.user.fullName | highlight : searchValue}}"></span>&nbsp;
+      <a class="text-h7 link" (click)="removeEmployee(employee)">remove</a>
+    </li>
+  </ul>
 </div>
+
+

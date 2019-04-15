@@ -10,7 +10,7 @@ import {ManagersService} from "../../manager/manager.service";
 import {Manager} from "../../manager/manager";
 import {ToastrService} from "ngx-toastr";
 import {AppTranslateLoader} from "../../util/translate/translate-loader";
-import {RkasToastrService} from "../../util/toastr/toastr.service";
+import {CompanyToastrService} from "../../util/toastr/company-toastr.service";
 import {TranslateService} from "@ngx-translate/core";
 
 
@@ -31,7 +31,7 @@ export class EmployeeModalComponent implements OnInit {
   constructor(private companyService: CompanyService,
               private usersService: UsersService,
               private managersService: ManagersService,
-              private toastr: RkasToastrService,
+              private toastr: CompanyToastrService,
               private translate: TranslateService,
               private ngbActiveModal: NgbActiveModal,
               private employeesService: EmployeeService) {

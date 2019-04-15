@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
 
 @Injectable()
-export class RkasToastrService {
+export class CompanyToastrService {
 
   constructor(public toastr: ToastrService) {
   }

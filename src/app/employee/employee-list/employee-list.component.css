@@ -40,9 +40,3 @@ ul, #myUL {
 .clt ul > li:last-child::after {
   height: 8px;
 }
-
-
-
-
-
-

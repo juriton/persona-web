@@ -11,9 +11,9 @@ import { Component } from '@angular/core';
 import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
 
 @Component({
-  selector: '[rkas-toast-component]',
-  templateUrl: `./rkas-toast.component.html`,
-  styleUrls: ['rkas-toast.component.css'],
+  selector: '[company-toast-component]',
+  templateUrl: `./company-toast.component.html`,
+  styleUrls: ['company-toast.component.css'],
   animations: [
     trigger('flyInOut', [
       state('inactive', style({
@@ -41,7 +41,7 @@ import { Toast, ToastrService, ToastPackage } from 'ngx-toastr';
   ],
   preserveWhitespaces: false,
 })
-export class RkasToastComponent extends Toast {
+export class CompanyToastComponent extends Toast {
 
   // constructor is only necessary when not using AoT
   constructor(

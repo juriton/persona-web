@@ -1,0 +1,28 @@
+<div class="toast-message ng-star-inserted">
+  <div class="notice notice--{{options.titleClass}}">
+    <div class="notice__cell notice__cell--icon">
+      <span class="notice__icon" [svgIcon]="'check-circle'" svgClass="icon" *ngIf="options.titleClass == 'success'"></span>
+      <span class="notice__icon" [svgIcon]="'close-circle'" svgClass="icon" *ngIf="options.titleClass == 'error'"></span>
+      <span class="notice__icon" [svgIcon]="'info-circle'" svgClass="icon" *ngIf="options.titleClass == 'info'"></span>
+    </div>
+    <div class="notice__cell notice__cell--content">
+      <div class="notice__content">
+        <div *ngIf="message && options.enableHtml" role="alert" aria-live="polite"
+             [class]="options.messageClass" [innerHTML]="message">
+        </div>
+        <div *ngIf="message && !options.enableHtml" role="alert" aria-live="polite"
+             [class]="options.messageClass" [attr.aria-label]="message">
+          {{ message }}
+        </div>
+      </div>
+      <div class="notice__action">
+        <button class="button button--link notice__button" *ngIf="options.closeButton" (click)="remove()">Sulge
+          <span [svgIcon]="'close'" svgClass="icon  icon--text-middle button__icon--right"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="options.progressBar">
+    <div class="toast-progress" [style.width]="width + '%'"></div>
+  </div>
+</div>
